@@ -1,16 +1,22 @@
-# This is a sample Python script.
+# This is the app's main script.
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# General configuration
+from sys import path
+from os import getcwd
+from domains.image import Image
 
+path.append(getcwd() + "/domains")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# Application start
 
+print('Welcome to the fruit condition application! \n\nPlease input the path of the image you want to process:\n')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+image_path = input()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+image = Image(path=image_path)
+
+if image.is_valid():
+    print('\nSearching for fruits in the provided image...\n')
+else:
+    print("\nError: The path provided doesn't contain a valid image!\n")
+

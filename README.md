@@ -1,0 +1,1 @@
+Add information about images in the right format/lighting/etc

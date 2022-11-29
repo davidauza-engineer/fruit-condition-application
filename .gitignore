@@ -1,2 +1,12 @@
 # IDE related files
 .idea
+
+# Result files
+assets/result.jpg-objects
+assets/result.*
+
+# Cache files
+*/__pycache__
+
+# MacOS related files
+.DS_Store

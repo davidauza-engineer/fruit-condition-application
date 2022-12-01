@@ -3,7 +3,7 @@ from PIL import Image as img
 from imageai.Detection import ObjectDetection
 import os
 
-execution_path = os.getcwd() + "/assets"
+execution_path = os.getcwd() + '/assets'
 
 
 class Image(Domain):

@@ -1,11 +1,14 @@
 # This is the app's main script.
 
 # General configuration
+import sys
 from sys import path
 from os import getcwd
 from domains.image import Image
+from domains.fruit import Fruit
+from domains.color_palette import ColorPalette
 
-path.append(getcwd() + "/domains")
+path.append(getcwd() + '/domains')
 
 # Application start
 
@@ -20,13 +23,21 @@ if image.is_valid():
     objects, images = image.detect_objects()
     print('\n')
     if len(objects) == 0:
-        print('No objects found in the image.')
+        sys.exit('No objects found in the image.')
+    fruits = []
     for index, object_found in enumerate(objects):
         name = object_found['name']
         probability = object_found['percentage_probability']
         print(f'Found a/an {name} with a probability of {probability}')
         if name in ['banana', 'apple', 'orange'] and probability >= 75:
-            print(f'\nGenerating color palette for object {name}...\n')
+            fruits.append(Fruit(name=name, image=Image(path=images[index])))
+    if len(fruits) == 0:
+        sys.exit('\nNo fruits detected in the image.')
+    else:
+        for fruit in fruits:
+            print(f'\nGenerating color palette for fruit {fruit.name}...\n')
+            palette = ColorPalette(image=fruit.image)
+            print(palette.colors)
     print('\n')
 else:
     print("\nError: The path provided doesn't contain a valid image!\n")

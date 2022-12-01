@@ -19,3 +19,5 @@ we might not support spaces in the path *Validate
 Add detailed instructions on how to run the project and install the required dependencies.
 
 https://stackoverflow.com/questions/66567866/how-to-add-a-new-dependency-in-requirements-txt-file
+
+Support for the following formats  ['png', 'jpg', 'jpeg', 'tiff', 'bmp', 'gif']

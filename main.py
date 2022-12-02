@@ -29,7 +29,7 @@ if image.is_valid():
         name = object_found['name']
         probability = object_found['percentage_probability']
         print(f'Found a/an {name} with a probability of {probability}')
-        if name in ['banana', 'apple', 'orange'] and probability >= 75:
+        if name in ['banana', 'apple', 'orange'] and probability >= 70:
             fruits.append(Fruit(name=name, image=Image(path=images[index])))
     if len(fruits) == 0:
         sys.exit('\nNo fruits detected in the image.')

@@ -1,23 +1,130 @@
-Add information about images in the right format/lighting/etc
+<div align="center">
+  <h1><b>Fruit Condition Application</b></h1>
+</div>
 
-# TODO
+# 📗 Table of Contents
 
-Now just bananas
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🙏 Resources](#resources)
 
-Test with:
-- Banana
-- No banana
-- No fruits
-- No objects
-- Banana, apples
-- Banana, apples, orange
+# 📖 Fruit Condition Application <a name="about-project"></a>
 
-python 3.8
+> This project is made in the context of the `Wearable Devices and Computer Vision` course at `Harvard`.
 
-we might not support spaces in the path *Validate
+**Fruit Condition Application** is a CLI application that detect fruits in an image, generates a Color Palette and 
+determines the condition of the fruit based on the detected colors. The supported fruits in the current versions are:
+`apples`, `bananas`, and `oranges`.
 
-Add detailed instructions on how to run the project and install the required dependencies.
+## 🛠 Built With <a name="built-with"></a>
 
-https://stackoverflow.com/questions/66567866/how-to-add-a-new-dependency-in-requirements-txt-file
+### Tech Stack <a name="tech-stack"></a>
 
-Support for the following formats  ['png', 'jpg', 'jpeg', 'tiff', 'bmp', 'gif']
+> Python 3.8 and other computer vision and machine learning libraries like `extcolors`, `imageai`, `Keras`, `opencv`,
+`tensorflow`, between others. Consult `requirements.txt` for a complete list of dependencies.
+
+### Key Features <a name="key-features"></a>
+
+> The application mainly determines the condition of a fruit based on the features below:
+
+- **Object detection.**
+- **Color palette generation.**
+- **Determining the condition of a given banana, apple, or orange.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> Below you can find detailed instructions of how to run this project.
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+- Python 3.8.15
+
+### Setup
+
+Clone this repository to your desired directory.
+
+### Install
+
+Install this project by going to the project's root directory and running:
+
+```sh
+$ pip install -r requirements.txt
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+$ python main.py
+```
+
+When prompted to input the image path you can use the path for the images in the `test` directory. For example: 
+`/Users/davidauza/Desktop/fruit-condition-application/test/banana.jpg`. The supported image formats are: `png`, `jpg`,
+`jpeg`, `tiff`, `bmp`, `gif`. Also, make sure to include a valid path with no spaces in the image name.
+
+If there is a fruit in the image the color palette for that fruit will be printed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+> This project was created by the Harvard students below.
+
+👤 **David Auza**
+
+- GitHub: [@davidauza-engineer](https://github.com/davidauza-engineer)
+- Twitter: [@davidauzaeng](https://twitter.com/davidauzaeng)
+- LinkedIn: [David Auza](https://www.linkedin.com/in/davidauza-engineer/)
+
+👤 **Bridgette Maurer**
+
+- GitHub: [@bmaurer2](https://github.com/bmaurer2)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
+- LinkedIn: [Bridgette Maurer](https://www.linkedin.com/in/bridgette-maurer/)
+
+👤 **Amna Jawad**
+
+- GitHub: [@Amnajawad](https://github.com/Amnajawad)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
+- LinkedIn: [Amna Jawad](https://www.linkedin.com/in/amna-jawad-bb687078/)
+
+👤 **Jody Trumbull**
+
+- GitHub: [@JoTeaHESFolio](https://github.com/JoTeaHESFolio)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
+- LinkedIn: [Jody Elizabeth Trumbull](https://www.linkedin.com/in/jodyelizabethtrumbull/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> After releasing the MVP the features below will be implemented.
+
+- [ ] **Background removal for the cropped fruit images.**
+- [ ] **Cropping the object to just generate the color palette for the very specific fruit.**
+- [ ] **Support for spaces in the image path.**
+ 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 Resources <a name="resources"></a>
+
+- [Image Color Extraction with Python in 4 Steps](https://towardsdatascience.com/image-color-extraction-with-python-in-4-steps-8d9370d9216e)
+- [Object Detection with 10 lines of code](https://towardsdatascience.com/object-detection-with-10-lines-of-code-d6cb4d86f606)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

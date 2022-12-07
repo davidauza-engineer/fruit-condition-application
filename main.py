@@ -7,6 +7,8 @@ from os import getcwd
 from domains.image import Image
 from domains.fruit import Fruit
 from domains.color_palette import ColorPalette
+import pickle
+import pandas as pd
 
 path.append(getcwd() + '/domains')
 model = getcwd() +'/assets/gnb.pkl'

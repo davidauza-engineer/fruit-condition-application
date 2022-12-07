@@ -10,17 +10,20 @@ from domains.color_palette import ColorPalette
 import pickle
 import pandas as pd
 from statistics import mode
+from PIL import ImageColor
 
 path.append(getcwd() + '/domains')
 model = getcwd() +'/assets/dt.pkl'
 
-def pix_fruitID(df, model_path):
+def pix_fruit_id(data, model_path):
     # load model
     loaded_model = pickle.load(open(model_path, 'rb'))
     for i in range(0, len(data)):
-        data.hex_code[i] = list(ImageColor.getcolor(data.hex_code[i], "RGB"))
+        data.hex_code[i] = list(ImageColor.getcolor(data.hex_code[i], 'RGB'))
+    df = pd.DataFrame(data['hex_code'].to_list(), columns=['r', 'g', 'b'])
+    data = pd.concat([df, data], axis=1)
     df = data.drop('hex_code', axis=1)
-    
+
     return mode(loaded_model.predict(df))
 
 # Application start
@@ -51,7 +54,7 @@ if image.is_valid():
             print(f'\nGenerating color palette for fruit {fruit.name}...\n')
             palette = ColorPalette(image=fruit.image)
             print(palette.colors)
-            pred = pix_fruitID(palette.colors, model)
+            pred = pix_fruit_id(palette.colors, model)
             print(pred)
     print('\n')
 else:

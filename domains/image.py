@@ -6,10 +6,12 @@ import os
 execution_path = os.getcwd() + '/assets'
 
 
+# This class represents an Image.
 class Image(Domain):
     def __init__(self, path):
         self.path = path
 
+    # This method determines if an image is valid or not based on opening it and checking the file extension.
     def is_valid(self):
         try:
             image = img.open(self.path)
@@ -18,6 +20,8 @@ class Image(Domain):
 
         return image.format.lower() in ['png', 'jpg', 'jpeg', 'tiff', 'bmp', 'gif']
 
+    # This method detect the objects in an image. It leverages the imageai library and the `RetinaNet Model` in the
+    # imageai library.
     def detect_objects(self):
         detector = ObjectDetection()
         detector.setModelTypeAsRetinaNet()

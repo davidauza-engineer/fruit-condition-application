@@ -1,6 +1,6 @@
 # This is the app's main script.
 
-# General configuration
+# General configuration.
 import sys
 from sys import path
 from os import getcwd
@@ -25,6 +25,7 @@ if image.is_valid():
     if len(objects) == 0:
         sys.exit('No objects found in the image.')
     fruits = []
+    # If the system detect objects it will print them.
     for index, object_found in enumerate(objects):
         name = object_found['name']
         probability = object_found['percentage_probability']
@@ -34,10 +35,19 @@ if image.is_valid():
     if len(fruits) == 0:
         sys.exit('\nNo fruits detected in the image.')
     else:
+        # If there are fruits in the detected objects it will generate the color palette for that image and determine
+        # the condition of the fruit.
         for fruit in fruits:
-            print(f'\nGenerating color palette for fruit {fruit.name}...\n')
+            print('\n=================================================================================================')
+            print(f'Generating color palette for fruit {fruit.name}...')
+            print('=================================================================================================\n')
             palette = ColorPalette(image=fruit.image)
             print(palette.colors)
+            print('\n')
+            fruit_condition = fruit.get_condition(palette.colors)
+            print('\n***************************************************************************')
+            print(f'The condition for the {fruit.name} is {fruit_condition}.')
+            print('***************************************************************************\n')
     print('\n')
 else:
     print("\nError: The path provided doesn't contain a valid image!\n")

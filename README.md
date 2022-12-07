@@ -22,19 +22,19 @@
 > This project is made in the context of the `Wearable Devices and Computer Vision` course at `Harvard`.
 
 **Fruit Condition Application** is a CLI application that detect fruits in an image, generates a Color Palette and 
-determines the condition of the fruit based on the detected colors. The supported fruits in the current versions are:
+determines the condition of the fruit based on the detected colors. The supported fruits in the current version are:
 `apples`, `bananas`, and `oranges`.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Python 3.8 and other computer vision and machine learning libraries like `extcolors`, `imageai`, `Keras`, `opencv`,
+> Python 3.8.15 and other computer vision and machine learning libraries like `extcolors`, `imageai`, `Keras`, `opencv`,
 `tensorflow`, between others. Consult `requirements.txt` for a complete list of dependencies.
 
 ### Key Features <a name="key-features"></a>
 
-> The application mainly determines the condition of a fruit based on the features below:
+> The application determines the condition of a fruit based on the features below:
 
 - **Object detection.**
 - **Color palette generation.**
@@ -60,7 +60,7 @@ Clone this repository to your desired directory.
 
 ### Install
 
-Install this project by going to the project's root directory and running:
+Install this project dependencies by going to the project's root directory and running:
 
 ```sh
 $ pip install -r requirements.txt
@@ -78,7 +78,8 @@ When prompted to input the image path you can use the path for the images in the
 `/Users/davidauza/Desktop/fruit-condition-application/test/banana.jpg`. The supported image formats are: `png`, `jpg`,
 `jpeg`, `tiff`, `bmp`, `gif`. Also, make sure to include a valid path with no spaces in the image name.
 
-If there is a fruit in the image the color palette for that fruit will be printed.
+If there is a fruit in the image the color palette for that fruit will be printed and the fruit condition will be
+determined.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,22 +93,19 @@ If there is a fruit in the image the color palette for that fruit will be printe
 - Twitter: [@davidauzaeng](https://twitter.com/davidauzaeng)
 - LinkedIn: [David Auza](https://www.linkedin.com/in/davidauza-engineer/)
 
-👤 **Bridgette Maurer**
-
-- GitHub: [@bmaurer2](https://github.com/bmaurer2)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
-- LinkedIn: [Bridgette Maurer](https://www.linkedin.com/in/bridgette-maurer/)
-
 👤 **Amna Jawad**
 
 - GitHub: [@Amnajawad](https://github.com/Amnajawad)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
 - LinkedIn: [Amna Jawad](https://www.linkedin.com/in/amna-jawad-bb687078/)
+
+👤 **Bridgette Maurer**
+
+- GitHub: [@bmaurer2](https://github.com/bmaurer2)
+- LinkedIn: [Bridgette Maurer](https://www.linkedin.com/in/bridgette-maurer/)
 
 👤 **Jody Trumbull**
 
 - GitHub: [@JoTeaHESFolio](https://github.com/JoTeaHESFolio)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle) /****/
 - LinkedIn: [Jody Elizabeth Trumbull](https://www.linkedin.com/in/jodyelizabethtrumbull/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

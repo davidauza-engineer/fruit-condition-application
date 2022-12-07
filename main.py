@@ -9,6 +9,16 @@ from domains.fruit import Fruit
 from domains.color_palette import ColorPalette
 
 path.append(getcwd() + '/domains')
+model = getcwd() +'/assets/gnb.pkl'
+
+def pix_fruitID(df, model_path):
+    # load model
+    loaded_model = pickle.load(open(model_path, 'rb'))
+    
+    # rotate df
+    df = pd.DataFrame(df.values.T[1:], columns=df.hex_code.tolist())
+    
+    return loaded_model.predict(df)
 
 # Application start
 
@@ -38,6 +48,8 @@ if image.is_valid():
             print(f'\nGenerating color palette for fruit {fruit.name}...\n')
             palette = ColorPalette(image=fruit.image)
             print(palette.colors)
+            pred = pix_fruitID(palette.colors, model)
+            print(pred)
     print('\n')
 else:
     print("\nError: The path provided doesn't contain a valid image!\n")

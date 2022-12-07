@@ -25,6 +25,7 @@ if image.is_valid():
     if len(objects) == 0:
         sys.exit('No objects found in the image.')
     fruits = []
+    # If the system detect objects it will print them.
     for index, object_found in enumerate(objects):
         name = object_found['name']
         probability = object_found['percentage_probability']
@@ -34,6 +35,8 @@ if image.is_valid():
     if len(fruits) == 0:
         sys.exit('\nNo fruits detected in the image.')
     else:
+        # If there are fruits in the detected objects it will generate the color palette for that image and determine
+        # the condition of the fruit.
         for fruit in fruits:
             print('\n=================================================================================================')
             print(f'Generating color palette for fruit {fruit.name}...')

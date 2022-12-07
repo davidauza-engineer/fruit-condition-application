@@ -9,18 +9,19 @@ from domains.fruit import Fruit
 from domains.color_palette import ColorPalette
 import pickle
 import pandas as pd
+from statistics import mode
 
 path.append(getcwd() + '/domains')
-model = getcwd() +'/assets/gnb.pkl'
+model = getcwd() +'/assets/dt.pkl'
 
 def pix_fruitID(df, model_path):
     # load model
     loaded_model = pickle.load(open(model_path, 'rb'))
+    for i in range(0, len(data)):
+        data.hex_code[i] = list(ImageColor.getcolor(data.hex_code[i], "RGB"))
+    df = data.drop('hex_code', axis=1)
     
-    # rotate df
-    df = pd.DataFrame(df.values.T[1:], columns=df.hex_code.tolist())
-    
-    return loaded_model.predict(df)
+    return mode(loaded_model.predict(df))
 
 # Application start
 

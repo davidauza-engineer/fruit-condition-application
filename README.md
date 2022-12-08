@@ -100,7 +100,9 @@ and navigating to the where "LearningTones.ipynb" is located on your disk or cd 
 $ jupyter notebook demo.ipynb
 ```
 
-in the command prompt. Jupyter notebooks will open on a web browser page, but no fear, it does not require the internet-- it uses a port on the local host (your computer) to run on the browser page. When ready, click the double arrow to "Run All Cells".
+in the command prompt. Jupyter notebooks will open on a web browser page, but no fear, it does not require the internet-- it uses a port on the local host (your computer) to run on the browser page. 
+
+If desired, change the model and image paths and check all element names match the following to the format ```testing_models(img_path, img_class_model, pix_class_model)```. When ready, click the double arrow to "Run All Cells".
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

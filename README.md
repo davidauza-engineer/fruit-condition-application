@@ -81,6 +81,24 @@ When prompted to input the image path you can use the path for the images in the
 If there is a fruit in the image the color palette for that fruit will be printed and the fruit condition will be
 determined.
 
+## Runing demo
+First, downlowd all the files as well as the notebook into a folder or location together. Since this is a jupyter notebook, it can best be run from the termial/command prompt. If one does not have jupyter notebooks installed, they can use google's online notebook service through their google account, another IDE that is jupyter notebook compatible (ex: canopy), or by installing jupyter notebooks. The latter is the easiest and can be done through the command prompt by entering the following:
+
+'''sh
+$ pip install notebook
+'''
+Once installed, either open up jupyter notebooks through the terminal by entering
+
+'''sh
+$ jupyter notebook
+'''
+and navigating to the where "LearningTones.ipynb" is located on your disk or cd to the location where "LearningTones.ipynb" is and entering
+
+'''sh
+$ jupyter notebook demo.ipynb
+'''
+in the command prompt. Jupyter notebooks will open on a web browser page, but no fear, it does not require the internet-- it uses a port on the local host (your computer) to run on the browser page. When ready, click the double arrow to "Run All Cells".
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
